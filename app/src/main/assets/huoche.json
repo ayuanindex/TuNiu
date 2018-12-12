@@ -1,0 +1,520 @@
+{
+  "code": 200,
+  "data": {
+	"allTrainType": {
+	  "arrivalCityName": "上海",
+	  "departureCityName": "北京",
+	  "list": [
+		{
+		  "link": "http://huoche.tuniu.com/station_200_2500/G",
+		  "trainType": 0,
+		  "trainTypeCode": "G",
+		  "trainTypeName": "G-高铁"
+		}
+	  ]
+	},
+	"count": 5,
+	"expire": false,
+	"filter": {
+	  "filter": [
+		{
+		  "id": "trainTypes",
+		  "name": "车型",
+		  "pros": [
+			{
+			  "id": 0,
+			  "name": "G-高铁"
+			},
+			{
+			  "id": 2,
+			  "name": "D-动车"
+			},
+			{
+			  "id": 4,
+			  "name": "T-特快"
+			},
+			{
+			  "id": 6,
+			  "name": "其它"
+			}
+		  ]
+		},
+		{
+		  "id": "seats",
+		  "name": "座席",
+		  "pros": [
+			{
+			  "id": 0,
+			  "name": "商务座"
+			},
+			{
+			  "id": 1,
+			  "name": "特等座"
+			},
+			{
+			  "id": 2,
+			  "name": "一等座"
+			},
+			{
+			  "id": 3,
+			  "name": "二等座"
+			},
+			{
+			  "id": 4,
+			  "name": "高级软卧"
+			},
+			{
+			  "id": 5,
+			  "name": "软卧"
+			},
+			{
+			  "id": 6,
+			  "name": "硬卧"
+			},
+			{
+			  "id": 8,
+			  "name": "硬座"
+			},
+			{
+			  "id": 10,
+			  "name": "动卧"
+			}
+		  ]
+		},
+		{
+		  "id": "departureStations",
+		  "name": "出发车站",
+		  "pros": [
+			{
+			  "id": 1175342,
+			  "name": "北京"
+			},
+			{
+			  "id": 1175341,
+			  "name": "北京南"
+			}
+		  ]
+		},
+		{
+		  "id": "arrivalStations",
+		  "name": "到达车站",
+		  "pros": [
+			{
+			  "id": 1175076,
+			  "name": "上海虹桥"
+			},
+			{
+			  "id": 1175075,
+			  "name": "上海"
+			}
+		  ]
+		},
+		{
+		  "id": "departureTimes",
+		  "name": "出发时段",
+		  "pros": [
+			{
+			  "id": "6-12",
+			  "name": "6-12点"
+			},
+			{
+			  "id": "12-18",
+			  "name": "12-18点"
+			},
+			{
+			  "id": "18-24",
+			  "name": "18-24点"
+			}
+		  ]
+		},
+		{
+		  "id": "arrivalTimes",
+		  "name": "到达时段",
+		  "pros": [
+			{
+			  "id": "6-12",
+			  "name": "6-12点"
+			},
+			{
+			  "id": "12-18",
+			  "name": "12-18点"
+			},
+			{
+			  "id": "18-24",
+			  "name": "18-24点"
+			}
+		  ]
+		},
+		{
+		  "id": "departStationTypes",
+		  "name": "是否始发",
+		  "pros": [
+			{
+			  "id": 0,
+			  "name": "始发"
+			}
+		  ]
+		}
+	  ],
+	  "sort": [
+		{
+		  "id": 1,
+		  "name": "出发时间",
+		  "type": 2
+		},
+		{
+		  "id": 3,
+		  "name": "运行时间",
+		  "type": 2
+		},
+		{
+		  "id": 2,
+		  "name": "到达时间",
+		  "type": 2
+		},
+		{
+		  "id": 4,
+		  "name": "价格",
+		  "type": 2
+		}
+	  ]
+	},
+	"lastTime": 0,
+	"list": [
+	  {
+		"accessByIdcard": "Y",
+		"arrivalCityCode": 2500,
+		"arrivalCityName": "上海",
+		"canChooseSeat": 0,
+		"departDepartTime": "07:00",
+		"departStationId": 1175341,
+		"departStationName": "北京南",
+		"departStationType": 0,
+		"departStationTypeName": "ticketbtn",
+		"departureCityCode": 200,
+		"departureCityName": "北京",
+		"destArriveTime": "11:40",
+		"destStationId": 1175075,
+		"destStationName": "上海",
+		"destStationType": 1,
+		"destStationTypeName": "ticketbtn",
+		"duration": 280,
+		"durationDay": 1,
+		"durationStr": "4小时40分钟",
+		"memo": "",
+		"prices": [
+		  {
+			"detail": [],
+			"leftNumber": 0,
+			"price": 1762.5,
+			"promotionPrice": 1762.5,
+			"resId": 1924792165,
+			"seat": 0,
+			"seatName": "商务座",
+			"seatStatus": ""
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 939,
+			"promotionPrice": 939,
+			"resId": 1924792166,
+			"seat": 2,
+			"seatName": "一等座",
+			"seatStatus": "有"
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 558,
+			"promotionPrice": 558,
+			"resId": 1924792167,
+			"seat": 3,
+			"seatName": "二等座",
+			"seatStatus": "有"
+		  }
+		],
+		"saleStatus": 0,
+		"sellOut": 0,
+		"startSaleTime": "",
+		"trainId": 165,
+		"trainNum": "G5",
+		"trainType": 0,
+		"trainTypeName": "高铁",
+		"upOrDown": 0
+	  },
+	  {
+		"accessByIdcard": "Y",
+		"arrivalCityCode": 2500,
+		"arrivalCityName": "上海",
+		"canChooseSeat": 0,
+		"departDepartTime": "07:20",
+		"departStationId": 1175341,
+		"departStationName": "北京南",
+		"departStationType": 0,
+		"departStationTypeName": "ticketbtn",
+		"departureCityCode": 200,
+		"departureCityName": "北京",
+		"destArriveTime": "13:08",
+		"destStationId": 1175076,
+		"destStationName": "上海虹桥",
+		"destStationType": 1,
+		"destStationTypeName": "ticketbtn",
+		"duration": 348,
+		"durationDay": 1,
+		"durationStr": "5小时48分钟",
+		"memo": "",
+		"prices": [
+		  {
+			"detail": [],
+			"leftNumber": 1,
+			"price": 1748,
+			"promotionPrice": 1748,
+			"resId": 354865684,
+			"seat": 0,
+			"seatName": "商务座",
+			"seatStatus": ""
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 17,
+			"price": 933,
+			"promotionPrice": 933,
+			"resId": 354865687,
+			"seat": 2,
+			"seatName": "一等座",
+			"seatStatus": ""
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 553,
+			"promotionPrice": 553,
+			"resId": 354865690,
+			"seat": 3,
+			"seatName": "二等座",
+			"seatStatus": "有"
+		  }
+		],
+		"saleStatus": 0,
+		"sellOut": 0,
+		"startSaleTime": "",
+		"trainId": 16105,
+		"trainNum": "G105",
+		"trainType": 0,
+		"trainTypeName": "高铁",
+		"upOrDown": 0
+	  },
+	  {
+		"accessByIdcard": "Y",
+		"arrivalCityCode": 2500,
+		"arrivalCityName": "上海",
+		"canChooseSeat": 0,
+		"departDepartTime": "07:50",
+		"departStationId": 1175341,
+		"departStationName": "北京南",
+		"departStationType": 0,
+		"departStationTypeName": "ticketbtn",
+		"departureCityCode": 200,
+		"departureCityName": "北京",
+		"destArriveTime": "13:12",
+		"destStationId": 1175076,
+		"destStationName": "上海虹桥",
+		"destStationType": 1,
+		"destStationTypeName": "ticketbtn",
+		"duration": 322,
+		"durationDay": 1,
+		"durationStr": "5小时22分钟",
+		"memo": "",
+		"prices": [
+		  {
+			"detail": [],
+			"leftNumber": 18,
+			"price": 1748,
+			"promotionPrice": 1748,
+			"resId": 354869384,
+			"seat": 0,
+			"seatName": "商务座",
+			"seatStatus": ""
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 933,
+			"promotionPrice": 933,
+			"resId": 354869388,
+			"seat": 2,
+			"seatName": "一等座",
+			"seatStatus": "有"
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 553,
+			"promotionPrice": 553,
+			"resId": 354869391,
+			"seat": 3,
+			"seatName": "二等座",
+			"seatStatus": "有"
+		  }
+		],
+		"saleStatus": 0,
+		"sellOut": 0,
+		"startSaleTime": "",
+		"trainId": 16143,
+		"trainNum": "G143",
+		"trainType": 0,
+		"trainTypeName": "高铁",
+		"upOrDown": 0
+	  },
+	  {
+		"accessByIdcard": "Y",
+		"arrivalCityCode": 2500,
+		"arrivalCityName": "上海",
+		"canChooseSeat": 0,
+		"departDepartTime": "08:05",
+		"departStationId": 1175341,
+		"departStationName": "北京南",
+		"departStationType": 0,
+		"departStationTypeName": "ticketbtn",
+		"departureCityCode": 200,
+		"departureCityName": "北京",
+		"destArriveTime": "13:46",
+		"destStationId": 1175076,
+		"destStationName": "上海虹桥",
+		"destStationType": 1,
+		"destStationTypeName": "ticketbtn",
+		"duration": 341,
+		"durationDay": 1,
+		"durationStr": "5小时41分钟",
+		"memo": "",
+		"prices": [
+		  {
+			"detail": [],
+			"leftNumber": 10,
+			"price": 1748,
+			"promotionPrice": 1748,
+			"resId": 354865873,
+			"seat": 0,
+			"seatName": "商务座",
+			"seatStatus": ""
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 933,
+			"promotionPrice": 933,
+			"resId": 354865874,
+			"seat": 2,
+			"seatName": "一等座",
+			"seatStatus": "有"
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 553,
+			"promotionPrice": 553,
+			"resId": 354865875,
+			"seat": 3,
+			"seatName": "二等座",
+			"seatStatus": "有"
+		  }
+		],
+		"saleStatus": 0,
+		"sellOut": 0,
+		"startSaleTime": "",
+		"trainId": 16107,
+		"trainNum": "G107",
+		"trainType": 0,
+		"trainTypeName": "高铁",
+		"upOrDown": 0
+	  },
+	  {
+		"accessByIdcard": "Y",
+		"arrivalCityCode": 2500,
+		"arrivalCityName": "上海",
+		"canChooseSeat": 0,
+		"departDepartTime": "08:35",
+		"departStationId": 1175341,
+		"departStationName": "北京南",
+		"departStationType": 0,
+		"departStationTypeName": "ticketbtn",
+		"departureCityCode": 200,
+		"departureCityName": "北京",
+		"destArriveTime": "14:22",
+		"destStationId": 1175076,
+		"destStationName": "上海虹桥",
+		"destStationType": 1,
+		"destStationTypeName": "ticketbtn",
+		"duration": 347,
+		"durationDay": 1,
+		"durationStr": "5小时47分钟",
+		"memo": "",
+		"prices": [
+		  {
+			"detail": [],
+			"leftNumber": 2,
+			"price": 1748,
+			"promotionPrice": 1748,
+			"resId": 354866741,
+			"seat": 0,
+			"seatName": "商务座",
+			"seatStatus": ""
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 0,
+			"price": 933,
+			"promotionPrice": 933,
+			"resId": 354866742,
+			"seat": 2,
+			"seatName": "一等座",
+			"seatStatus": ""
+		  },
+		  {
+			"detail": [],
+			"leftNumber": 99,
+			"price": 553,
+			"promotionPrice": 553,
+			"resId": 354866743,
+			"seat": 3,
+			"seatName": "二等座",
+			"seatStatus": "有"
+		  }
+		],
+		"saleStatus": 0,
+		"sellOut": 0,
+		"startSaleTime": "",
+		"trainId": 16111,
+		"trainNum": "G111",
+		"trainType": 0,
+		"trainTypeName": "高铁",
+		"upOrDown": 0
+	  }
+	],
+	"remark": "",
+	"streamId": "824b1d31-c781-47af-b5d8-207f3ad8670e",
+	"trainTypeDetails": [
+	  {
+		"number": 35,
+		"trainType": 0,
+		"trainTypeName": "G-高铁"
+	  },
+	  {
+		"number": 1,
+		"trainType": 6,
+		"trainTypeName": "其它"
+	  },
+	  {
+		"number": 1,
+		"trainType": 4,
+		"trainTypeName": "T-特快"
+	  },
+	  {
+		"number": 2,
+		"trainType": 2,
+		"trainTypeName": "D-动车"
+	  }
+	]
+  }
+}
