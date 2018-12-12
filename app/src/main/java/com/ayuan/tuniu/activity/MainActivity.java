@@ -58,11 +58,12 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void run() {
 				super.run();
-				final String[] par = new String[]{"2018-12-12", "200", "北京", "2500", "上海"};
+				final String[] par = new String[]{"2018-12-13", "200", "北京", "2500", "上海"};
 				final Map<String, Object> hashMap = HttpRequset.trainTicketQuery(par);
 				ArrayList<Lists> list = (ArrayList<Lists>) hashMap.get("list");
-				Lists lists = list.get(0);
-				Log.i(TAG, "哈哈:获取到了解析:" + lists.toString());
+				for (Lists lists : list) {
+					Log.i(TAG, "哈哈:lists的解析" + lists.toString());
+				}
 			}
 		}.start();
 	}

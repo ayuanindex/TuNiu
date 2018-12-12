@@ -9,6 +9,7 @@ import com.ayuan.tuniu.vo.Lists;
 import com.ayuan.tuniu.vo.Prices;
 import com.ayuan.tuniu.vo.Pros;
 import com.ayuan.tuniu.vo.Sort;
+import com.ayuan.tuniu.vo.TrainTypeDetails;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,7 +18,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Handler;
 
 public class JsonAnalyzeUtil {
 	private static final String TAG = "MainActivity";
@@ -59,7 +59,9 @@ public class JsonAnalyzeUtil {
 					JSONArray jsonObjectList = data.optJSONArray("list");
 					ArrayList<Lists> listsArrayList = getList(jsonObjectList);
 					objectMap.put("list", listsArrayList);
-
+					JSONArray trainTypeDetails = data.optJSONArray("trainTypeDetails");
+					ArrayList<TrainTypeDetails> trainTypeDetails1 = getTrainTypeDetails(trainTypeDetails);
+					objectMap.put("trainTypeDetails", trainTypeDetails1);
 				} else {
 					return objectMap;
 				}
@@ -80,8 +82,8 @@ public class JsonAnalyzeUtil {
 	private static Filter_Sort getFilter(JSONObject filter) {
 		JSONArray filter1 = filter.optJSONArray("filter");
 		JSONArray sort = filter.optJSONArray("sort");
-		ArrayList<Filter> filters1 = new ArrayList<>();
-		ArrayList<Sort> sorts = new ArrayList<>();
+		ArrayList<Filter> filters1 = new ArrayList<Filter>();
+		ArrayList<Sort> sorts = new ArrayList<Sort>();
 		ArrayList<Filter_Sort> filters = new ArrayList<Filter_Sort>();
 		for (int i = 0; i < filter1.length(); i++) {
 			JSONObject jsonObject = filter1.optJSONObject(i);
@@ -93,18 +95,22 @@ public class JsonAnalyzeUtil {
 				JSONObject jsonObject1 = pros.optJSONObject(i1);
 				int id1 = jsonObject1.optInt("id");
 				String name1 = jsonObject1.optString("name");
-				arrayList.add(new Pros(id1, name1));
+				Pros pros1 = new Pros(id1, name1);
+				arrayList.add(pros1);
 			}
-			filters1.add(new Filter(id, name, arrayList));
+			Filter filter2 = new Filter(id, name, arrayList);
+			filters1.add(filter2);
 		}
 		for (int i = 0; i < sort.length(); i++) {
 			int id = sort.optJSONObject(i).optInt("id");
 			String name = sort.optJSONObject(i).optString("name");
 			int type = sort.optJSONObject(i).optInt("type");
-			sorts.add(new Sort(id, name, type));
+			Sort sort1 = new Sort(id, name, type);
+			sorts.add(sort1);
 		}
 		return new Filter_Sort(filters1, sorts);
 	}
+
 
 	private static ArrayList<Lists> getList(JSONArray jsonObjectList) {
 		ArrayList<Lists> lists = new ArrayList<Lists>();
@@ -154,5 +160,18 @@ public class JsonAnalyzeUtil {
 			lists.add(lists1);
 		}
 		return lists;
+	}
+
+	private static ArrayList<TrainTypeDetails> getTrainTypeDetails(JSONArray trainTypeDetails) {
+		ArrayList<TrainTypeDetails> trainTypeDetailsArrayList = new ArrayList<TrainTypeDetails>();
+		for (int i = 0; i < trainTypeDetails.length(); i++) {
+			JSONObject jsonObject = trainTypeDetails.optJSONObject(i);
+			int number = jsonObject.optInt("number");
+			int trainType = jsonObject.optInt("trainType");
+			String trainTypeName = jsonObject.optString("trainTypeName");
+			TrainTypeDetails typeDetails = new TrainTypeDetails(number, trainType, trainTypeName);
+			trainTypeDetailsArrayList.add(typeDetails);
+		}
+		return trainTypeDetailsArrayList;
 	}
 }
