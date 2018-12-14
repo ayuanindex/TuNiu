@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	tools:context=".activity.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
 
-	<ImageView
-		android:id="@+id/iv_bar"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ea4e4f" />
 
-	<LinearLayout
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/iv_bar"
-		android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_bar"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
-		<EditText
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_weight="2"
-			android:hint="到站" />
+        <EditText
+            android:id="@+id/et_start"
+            style="@style/EditView_Style"
+            android:hint="出发车站" />
 
-		<ImageView
+        <ImageView
+            android:id="@+id/iv_change"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/start2end" />
 
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content" />
-	</LinearLayout>
+        <EditText
+            android:id="@+id/et_end"
+            style="@style/EditView_Style"
+            android:hint="到达车站" />
+    </LinearLayout>
 
-	<Button
-		android:id="@+id/btn_date"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentStart="true"
-		android:layout_marginStart="2dp"
-		android:layout_marginTop="47dp" />
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_title"
+        android:layout_marginTop="10dp"
+        android:text="日期选择"
+        android:textAlignment="center"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_btn_bg"
+        android:paddingLeft="150dp"
+        android:paddingRight="150dp"
+        android:text="查找车票"
+        android:textColor="#ffffff"
+        android:textSize="19sp" />
 
 </RelativeLayout>
