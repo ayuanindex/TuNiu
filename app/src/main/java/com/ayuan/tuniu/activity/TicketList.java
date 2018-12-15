@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -32,6 +33,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.transform.Source;
+
 /**
  * 火车票详情页
  */
@@ -48,6 +51,8 @@ public class TicketList extends AppCompatActivity implements View.OnClickListene
     private ProgressDialog progressDialog;
     private Map<String, Object> map = null;
     private LinearLayout ll_item;
+    private Button btn_time_sort;
+    private Button btn_price_sort;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,6 +68,8 @@ public class TicketList extends AppCompatActivity implements View.OnClickListene
         iv_option = (ImageView) findViewById(R.id.iv_option);
         tv_titlecity = (TextView) findViewById(R.id.tv_titlecity);
         lv_list = (ListView) findViewById(R.id.lv_list);
+        btn_time_sort = (Button) findViewById(R.id.btn_time_sort);
+        btn_price_sort = (Button) findViewById(R.id.btn_price_sort);
 
         intent = getIntent();
         parameters = intent.getStringArrayExtra("parameter");
@@ -74,6 +81,8 @@ public class TicketList extends AppCompatActivity implements View.OnClickListene
 
         iv_back.setOnClickListener(this);
         iv_option.setOnClickListener(this);
+        btn_time_sort.setOnClickListener(this);
+        btn_price_sort.setOnClickListener(this);
     }
 
     private void initData() {
@@ -87,7 +96,6 @@ public class TicketList extends AppCompatActivity implements View.OnClickListene
                 if (parameters != null) {
                     map = HttpRequset.trainTicketQuery(parameters);
                     if (map != null) {
-                        map = SortUtils.time_Sort(map);
                         ticketList = (ArrayList<Lists>) map.get("list");
                         runOnUiThread(new Runnable() {
                             @Override
@@ -109,14 +117,40 @@ public class TicketList extends AppCompatActivity implements View.OnClickListene
                 finish();
                 break;
             case R.id.iv_option:
-                //sequence
-                sequence();
+                break;
+            case R.id.btn_time_sort:
+                new Thread() {
+                    @Override
+                    public void run() {
+                        super.run();
+                        map = SortUtils.time_Sort(map);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ticketList = (ArrayList<Lists>) map.get("list");
+                                lv_list.setAdapter(new TrainTicketAdapter());
+                            }
+                        });
+                    }
+                }.start();
+                break;
+            case R.id.btn_price_sort:
+                new Thread() {
+                    @Override
+                    public void run() {
+                        super.run();
+                        map = SortUtils.price_Sort(map);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ticketList = (ArrayList<Lists>) map.get("list");
+                                lv_list.setAdapter(new TrainTicketAdapter());
+                            }
+                        });
+                    }
+                }.start();
                 break;
         }
-    }
-
-    private void sequence() {
-        //北京上海
     }
 
 

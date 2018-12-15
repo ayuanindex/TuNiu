@@ -23,7 +23,8 @@
         <EditText
             android:id="@+id/et_start"
             style="@style/EditView_Style"
-            android:hint="出发车站" />
+            android:hint="出发车站"
+            android:text="上海" />
 
         <ImageView
             android:id="@+id/iv_change"
@@ -35,7 +36,8 @@
         <EditText
             android:id="@+id/et_end"
             style="@style/EditView_Style"
-            android:hint="到达车站" />
+            android:hint="到达车站"
+            android:text="北京" />
     </LinearLayout>
 
     <TextView
