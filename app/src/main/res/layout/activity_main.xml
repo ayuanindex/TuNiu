@@ -56,8 +56,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/selector_btn_bg"
-        android:paddingLeft="150dp"
-        android:paddingRight="150dp"
+        android:paddingLeft="140dp"
+        android:paddingRight="140dp"
         android:text="查找车票"
         android:textColor="#ffffff"
         android:textSize="19sp" />
